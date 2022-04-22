@@ -1,0 +1,201 @@
+.content-header {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+
+.header-nav .link-nav {
+  position: relative;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-nav .link-nav::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 0;
+  height: 2px;
+  background-color: #E51937;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-nav .link-nav.active {
+  position: relative;
+  color: #E51937;
+}
+
+.header-nav .link-nav.active::before {
+  width: 100%;
+}
+
+.header-nav .link-nav:hover {
+  color: #ca4d60;
+}
+
+.header-nav .link-nav:hover::before {
+  width: 100%;
+}
+
+.wraper-info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.info-links .link-info {
+  position: relative;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.info-links .link-info::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 0;
+  height: 2px;
+  background-color: #E51937;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.info-links .link-info:hover {
+  color: #ca4d60;
+}
+
+.info-links .link-info:hover::before {
+  width: 100%;
+}
+
+.bur-menu {
+  display: none;
+}
+
+@media (max-width: 1060px) {
+  .bur-menu {
+    display: block;
+    width: 30px;
+    height: 18px;
+    margin-left: 30px;
+    position: relative;
+    z-index: 12;
+    cursor: pointer;
+  }
+  .bur-menu span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: solid 2px #E51937;
+  }
+  .bur-menu span:nth-child(2) {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .bur-menu span:nth-child(3) {
+    bottom: 0;
+  }
+  .wraper-nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10;
+    -webkit-box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.246);
+            box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.246);
+    overflow: hidden;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .wraper-nav .header-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 100px;
+  }
+  .wraper-nav::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -20%;
+    top: 60%;
+    width: 150%;
+    height: 150px;
+    outline: 3px solid #E51937;
+    z-index: -1;
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+    background-image: url("../img/tesla-bg-text.png");
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .wraper-nav.active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media (max-width: 450px) {
+  .info-links {
+    gap: 10px;
+  }
+  .info-links .link-info {
+    font-size: 13px;
+  }
+  .wraper-logo img {
+    width: 130px;
+  }
+}

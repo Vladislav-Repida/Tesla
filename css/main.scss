@@ -1,0 +1,556 @@
+.section-1{
+    margin-top: 58px;
+
+    background-image: url("../img/tesla-bg-text.png");
+    background-size: 100%  auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.content-section-1{
+    .block-main{
+        text-align: center;
+        .title{
+            font-size: 90px;
+            font-weight: 600;
+            line-height: 110px;
+        }
+        .subtitle{
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+    }
+    .tesla-image{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 26px;
+    }
+    
+    .wraper-info{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        margin: 0 auto;
+
+        .item-pref{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 auto;
+        }
+        .wraper-title{
+            font-size: 35px;
+            font-weight: 600;
+            line-height: 30px;
+
+            span{
+                margin-left: 3px;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 24px;
+            }
+        }
+        .subtitle{
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .test-drive{
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+            margin: 0 auto;
+            .drive-text{
+                text-transform: uppercase;
+                margin-left: 7px;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 16px;
+                color: #000;
+            }
+            .drive-icon{
+                max-height: 20px;
+            }
+            &:hover{
+                transform: translateY(-5px);
+            }
+        }
+        .btn-order{
+            position: relative;
+            height: 70%;
+            width: 100%;
+            max-width: 160px;
+            min-height: 35px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 700;
+            color: #E51937;
+            margin: 0 auto;
+
+            padding: 10px 30px;
+            outline: 2px solid #E51937;
+            transition: 0.3s;
+            overflow: hidden;
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+                width: 300%;
+                height: 600%;
+                background-color: #E51937;
+                transform: translateX(-62%) translateY(-100%) rotate(-45deg);
+                transition: 0.5s;
+            }
+            &:hover{
+                color: #fff;
+                &::after{
+                    transform: translateX(-20%) translateY(-50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+.arrow-down{
+    margin: 0 auto;
+    margin-top: 44px;
+    margin-bottom: 37px;
+    width: 28px;
+    height: 14px;
+    background-image: url("../img/icons/arrow-down.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+        transform: translateY(5px);
+    }
+}
+
+
+/* Section 2 */
+.content-section-2{
+    width: 100%;
+    
+    display: flex;
+    align-items: flex-end;
+
+    .title-image-block{
+        margin-left: 80px;
+        color: #E51937;
+        font-weight: 600;
+        font-size: 70px;
+    }
+    .image-wraper{
+        position: relative;
+        overflow: hidden;
+        width: 68vw;
+        height: 85vh;
+
+        .image{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    .info-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: #E51937;
+        height: 100vh;
+
+        padding: 40px 40px 60px 50px;
+        color: #fff;
+
+        .title-info{
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 37px;
+            margin-bottom: 11px;
+        }
+        .desc-info{
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            margin-bottom: 54px;
+        }
+        .info-list{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .info-list-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            max-width: 300px;
+        }
+        .info-item-list-wraper{
+            width: 240px;
+        }
+        .info-list-title-wraper{
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+
+            margin-bottom: 5px;
+        }
+        .big-title{
+            font-weight: 600;
+            font-size: 35px;
+            line-height: 30px;
+        }
+        .small-title{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 18px;
+        }
+        .info-list-desc{
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            max-width: 120px;
+        }
+    }
+    .info-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .learn-more-btn{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .btn-order{
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 12px 42px;
+        outline: 2px solid #fff;
+
+        transition: 0.3s;
+
+        &:hover{
+            background-color: #fff;
+            color: #E51937;
+        }
+    }
+}
+
+/* Section-3 */
+.content-section-3{
+    display: flex;
+    
+    min-height: 100vh;
+
+    .info-block{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .first-block{
+        background-color: #E51937;
+        width: 30vw;
+        min-width: 440px;
+        padding: 40px 40px 60px 50px;
+        color: #fff;
+    }
+
+    .title-info{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 37px;
+    }
+    .desc-info{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        margin-top: 12px;
+        margin-bottom: 49px;
+    }
+    .info-list{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 29px;
+    }
+    .info-list-item{
+        display: flex;
+        justify-content: space-between;
+        width: 290px;
+    }
+    .list-item-text-wraper{
+        display: flex;
+        align-items: flex-end;
+    }
+    .info-list-item-title{
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 14px;
+    }
+    .info-list-item-subtitle{
+        font-weight: 700;
+        font-size: 10px;
+        color: #fff;
+        opacity: 0.7;
+        text-transform: uppercase;
+        margin-left: 3px;
+    }
+
+    .learn-more-btn{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .wraper-more{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .btn-order{
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 12px 42px;
+        outline: 2px solid #fff;
+
+        transition: 0.3s;
+
+        &:hover{
+            background-color: #fff;
+            color: #E51937;
+        }
+    }
+
+    .second-block{
+        position: relative;
+
+        background-image: url("../img/model-s.png");
+        background-position: 100% 100px;
+        background-repeat: no-repeat;
+        background-size: 50vw auto;
+        width: 100%;
+        .car{
+            position: absolute;
+            width: 50vw;
+            min-width: 700px;
+            left: -100px;
+            top: 150px;
+        }
+    }
+}
+
+
+@media (max-width: 1330px) {
+    .content-section-1{
+        .wraper-info{
+            width: 100%;
+        }
+    }
+    .content-section-2{
+        .info-footer{
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+    }
+    .content-section-3{
+        .wraper-more{
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+    }
+}
+@media (max-width: 1250px) {
+    .content-section-2{
+        .image-wraper{
+            width: 60vw;
+        }
+    }
+    .content-section-3{
+        .first-block{
+            width: 40vw;
+        }
+        .second-block{
+            width: 60vw;
+        }
+    }
+}
+@media (max-width: 1060px) {
+    .content-section-2{
+        .image-wraper{
+            width: 50vw;
+        }
+    }
+    .content-section-3{
+        overflow: hidden;
+        .first-block{
+            width: 50vw;
+        }
+        .second-block{
+            width: 50vw;
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    .section-1{
+        background-position: center 20%;
+    }
+    .content-section-2{
+        flex-direction: column;
+        .info-block{
+            height: auto;
+            padding: 40px;
+            .desc-info{
+                margin: 0;
+            }
+            .info-list{
+                display: none;
+            }
+        }
+        .info-footer{
+            display: none;
+        }
+        .image-block{
+            padding-top: 0;
+        }
+        .image-wraper{
+            width: 100vw;
+            height: auto;
+            .image{
+                display: block;
+                position: relative;
+                width: 100%;
+            }
+        }
+        .title-image-block{
+            position: absolute;
+            z-index: 2;
+            margin-left: 5vw;
+        }
+    }
+    .content-section-3{
+        flex-direction: column;
+        min-height: auto;
+        .first-block{
+            padding: 40px;
+            padding-bottom: 60px;
+            width: 100vw;
+        }
+        .second-block{
+            width: 100vw;
+            background-position: center 50px;
+            background-size: 90vw auto;
+            order: -1;
+            .car{
+                left: 0;
+                top: 0;
+                position: relative;
+                display: block;
+                margin: 0 auto;
+                margin-top: 100px;
+                min-width: auto;
+                width: 100vw;
+            }
+        }
+        .title-list{
+            display: none;
+        }
+        .info-list{
+            display: none;
+        }
+        .info-footer{
+            display: none;
+        }
+        .desc-info{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 790px) {
+    .content-section-1{
+        .wraper-info{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 500px;
+        }
+    }
+    .content-section-2{
+        .image-wraper{
+            padding-top: 50px;
+        }
+    }
+}
+@media (max-width: 560px) {
+    .section-1{
+        background-position: center 25%;
+    }
+    .content-section-1{
+        .block-main{
+            .title{
+                font-size: 75px;
+            }
+        }
+        .tesla-image{
+            width: 100%;
+        }
+        .wraper-info{
+            width: 100%;
+            .item-pref{
+                .pref-icon{
+                    width: 35px;
+                }
+            }
+            .wraper-title{
+                font-size: 25px;
+                span{
+                    font-size: 16px;
+                    margin-left: 0;
+                }
+            }
+            .subtitle{
+                font-size: 10px;
+            }
+        }
+    }
+    .content-section-3{
+        .first-block{
+            min-width: auto;
+        }
+    }
+}

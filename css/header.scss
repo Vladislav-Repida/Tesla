@@ -1,0 +1,169 @@
+.content-header{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    .link-nav{
+        position: relative;
+        color: #000;
+        font-size: 15px;
+        font-weight: 600;
+        transition: 0.3s;
+
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+            width: 0;
+            height: 2px;
+            background-color: #E51937;
+            transition: 0.3s;
+        }
+    }
+    .link-nav.active{
+        position: relative;
+        color: #E51937;
+        &::before{
+            width: 100%;
+        }
+    }
+    .link-nav:hover{
+        color: #ca4d60;
+        &::before{
+            width: 100%;
+        }
+    }
+}
+.wraper-info-block{
+    display: flex;
+    align-items: center;
+}
+.info-links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .link-info{
+        position: relative;
+        color: #000;
+        font-size: 15px;
+        font-weight: 600;
+        transition: 0.3s;
+
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+            width: 0;
+            height: 2px;
+            background-color: #E51937;
+            transition: 0.3s;
+        }
+    }
+    .link-info:hover{
+        color: #ca4d60;
+        &::before{
+            width: 100%;
+        }
+    }
+}
+.bur-menu{
+    display: none;
+}
+@media (max-width: 1060px) {
+    .bur-menu{
+        display: block;
+        width: 30px;
+        height: 18px;
+        margin-left: 30px;
+
+        position: relative;
+        z-index: 12;
+        cursor: pointer;
+
+        span{
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            border-bottom: solid 2px #E51937;
+
+            &:nth-child(1){
+
+            }
+            &:nth-child(2){
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(3){
+                bottom: 0;
+            }
+        }
+    }
+    .wraper-nav{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 300px;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 10;
+        box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.246);
+        overflow: hidden;
+        transform: translateX(100%);
+        transition: 0.3s;
+
+        .header-nav{
+            flex-direction: column;
+            margin-top: 100px;
+        }
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: -20%;
+            top: 60%;
+            width: 150%;
+            height: 150px;
+            outline: 3px solid #E51937;
+            z-index: -1;
+            transform: rotate(25deg);
+            background-image: url("../img/tesla-bg-text.png");
+            background-size: 90% auto;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.active{
+            transform: translateX(0);
+        }
+    }
+}
+@media (max-width: 450px) {
+    .info-links{
+        gap: 10px;
+        .link-info{
+            font-size: 13px;
+        }
+    }
+    .wraper-logo{
+        img{
+            width: 130px;
+        }
+    }
+}
